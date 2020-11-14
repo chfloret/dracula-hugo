@@ -1,0 +1,13 @@
+baseURL = "https://johndoe.com/"
+languageCode = "en-us"
+title = "~johndoe"
+
+[author]
+	name = "John Doe"
+
+[menu]
+	[[menu.main]]
+		title = "<- back"
+		name = "Home page"
+		url = "/"
+		weight = -110

@@ -1,0 +1,12 @@
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+		{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+		<title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
+		<link rel="stylesheet" href="{{ .Site.BaseURL }}css/dracula.css">
+		{{ if .RSSLink -}}<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }}
+		<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+		{{ .Hugo.Generator }}
+    </head>

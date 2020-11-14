@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    {{ partial "head.html" . }}
+    <body>
+        <section>
+            <header>
+                {{ range .Site.Menus.main }}
+                <a href="../">{{ .Title }}</a>
+                {{ end }}
+                <h1>{{ .Title }}</h1>
+                {{ .Site.Author.name }} le <time datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">{{ .Date.Format "02 January 2006" }}</time>
+            </header>
+
+            {{ .Content }}
+
+            {{ partial "footer.html" . }}
+        </section>
+    </body>
+</html>

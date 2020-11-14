@@ -1,0 +1,8 @@
+            <header>
+                {{ if not .IsHome }}
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}">{{ .Title }}</a>
+                {{ end }}
+                {{ end }}
+                <h1>{{ .Site.Title }}</h1>
+            </header>
